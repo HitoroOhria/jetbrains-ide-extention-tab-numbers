@@ -1,45 +1,38 @@
-# jetbrains-ide-extention-tab-numbers
+# Show Tab Numbers
 
-![Build](https://github.com/HitoroOhria/jetbrains-ide-extention-tab-numbers/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/MARKETPLACE_ID.svg)](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID)
+Show Tab Numbers is a JetBrains IDE plugin that prefixes editor tab names with their open-tab position.
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Adjust the [group](./gradle.properties), as well as the [id](./src/main/resources/META-INF/plugin.xml), [name](./src/main/resources/META-INF/plugin.xml), and [sources package](./src/main/kotlin).
-- [ ] Adjust the plugin [description](./src/main/resources/META-INF/plugin.xml) (see [Tips][docs:plugin-description]) and this README to describe what your plugin does.
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html?from=IJPluginTemplate).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the `MARKETPLACE_ID` in the above README badges. You can obtain it once the plugin is published to JetBrains Marketplace.
-- [ ] Set the [Plugin Signing](https://plugins.jetbrains.com/docs/intellij/plugin-signing.html?from=IJPluginTemplate) related [secrets](https://github.com/JetBrains/intellij-platform-plugin-template#environment-variables).
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html?from=IJPluginTemplate).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+For example:
 
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+- The first open tab is shown as `1. filename`
+- The second open tab is shown as `2. filename`
 
-## Installation
+## Local Installation
 
-- Using the IDE built-in plugin system:
+This plugin is intended for personal local use. Publishing to JetBrains Marketplace is not required.
 
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "jetbrains-ide-extention-tab-numbers"</kbd> >
-  <kbd>Install</kbd>
+1. Build the plugin ZIP:
 
-- Using JetBrains Marketplace:
+   ```sh
+   ./gradlew buildPlugin
+   ```
 
-  Go to [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID) and install it by clicking the <kbd>Install to ...</kbd> button in case your IDE is running.
+2. Find the generated ZIP:
 
-  You can also download the [latest release](https://plugins.jetbrains.com/plugin/MARKETPLACE_ID/versions) from JetBrains Marketplace and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+   ```sh
+   ls build/distributions
+   ```
 
-- Manually:
+3. Install it from your JetBrains IDE:
 
-  Download the [latest release](https://github.com/HitoroOhria/jetbrains-ide-extention-tab-numbers/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
+   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Gear icon</kbd> > <kbd>Install Plugin from Disk...</kbd>
 
+4. Select the ZIP file under `build/distributions`, then restart the IDE.
 
----
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+## Development Run
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
-[docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+To launch a sandbox IDE with the plugin installed:
+
+```sh
+./gradlew runIde
+```

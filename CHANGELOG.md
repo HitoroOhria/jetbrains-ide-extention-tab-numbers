@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# jetbrains-ide-extention-tab-numbers Changelog
+# Show Tab Numbers Changelog
 
 ## [Unreleased]
 ### Added
