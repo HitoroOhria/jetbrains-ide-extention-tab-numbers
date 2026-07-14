@@ -12,5 +12,6 @@
     <extensions defaultExtensionNs="com.intellij">
         <editorTabTitleProvider implementation="com.github.hitoroohria.jetbrainsideextentiontabnumbers.TabNumberEditorTabTitleProvider" />
         <postStartupActivity implementation="com.github.hitoroohria.jetbrainsideextentiontabnumbers.ConsoleTabSwingInspector" />
+        <postStartupActivity implementation="com.github.hitoroohria.jetbrainsideextentiontabnumbers.TabReorderListener" />
     </extensions>
 </idea-plugin>
